@@ -273,7 +273,7 @@ export interface UserCreateOneWithoutPostsInput {
 }
 
 export interface UserCreateWithoutPostsInput {
-  email?: String;
+  email: String;
   name: String;
 }
 
@@ -308,7 +308,7 @@ export interface PostUpdateManyMutationInput {
 }
 
 export interface UserCreateInput {
-  email?: String;
+  email: String;
   name: String;
   posts?: PostCreateManyWithoutAuthorInput;
 }
@@ -463,7 +463,7 @@ export interface PostSubscription
 
 export interface User {
   id: ID_Output;
-  email?: String;
+  email: String;
   name: String;
 }
 
@@ -720,7 +720,7 @@ export interface UserSubscriptionPayloadSubscription
 
 export interface UserPreviousValues {
   id: ID_Output;
-  email?: String;
+  email: String;
   name: String;
 }
 

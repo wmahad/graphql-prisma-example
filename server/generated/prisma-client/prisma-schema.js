@@ -1,5 +1,5 @@
 module.exports = {
-typeDefs: /* GraphQL */ `type AggregatePost {
+        typeDefs: /* GraphQL */ `type AggregatePost {
   count: Int!
 }
 
@@ -258,7 +258,7 @@ type Subscription {
 
 type User {
   id: ID!
-  email: String
+  email: String!
   name: String!
   posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post!]
 }
@@ -270,7 +270,7 @@ type UserConnection {
 }
 
 input UserCreateInput {
-  email: String
+  email: String!
   name: String!
   posts: PostCreateManyWithoutAuthorInput
 }
@@ -281,7 +281,7 @@ input UserCreateOneWithoutPostsInput {
 }
 
 input UserCreateWithoutPostsInput {
-  email: String
+  email: String!
   name: String!
 }
 
@@ -305,7 +305,7 @@ enum UserOrderByInput {
 
 type UserPreviousValues {
   id: ID!
-  email: String
+  email: String!
   name: String!
 }
 
@@ -413,4 +413,5 @@ input UserWhereUniqueInput {
   email: String
 }
 `
-}
+      }
+    
